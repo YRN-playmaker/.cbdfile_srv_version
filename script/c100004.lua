@@ -35,14 +35,7 @@ function c100004.initial_effect(c)
 	e3:SetTarget(c100004.lktg)
 	e3:SetOperation(c100004.lkop)
 	c:RegisterEffect(e3)
-	--indes
-	local e4=Effect.CreateEffect(c)
-	e4:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_CONTINUOUS)
-	e4:SetCode(EVENT_BE_MATERIAL)
-	e4:SetProperty(EFFECT_FLAG_EVENT_PLAYER)
-	e4:SetCondition(c100004.indcon)
-	e4:SetOperation(c100004.indop)
-	c:RegisterEffect(e4)
+	
 end
 function c100004.hspfilter(c,ft,tp)
 	return c:IsSetCard(0x208) and c:IsLevel(4) and  c:IsCode(100000)
